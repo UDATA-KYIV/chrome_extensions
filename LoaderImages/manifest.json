@@ -1,0 +1,43 @@
+{
+  "manifest_version": 2,
+  "name": "__MSG_name__",
+  "version": "1.1",
+  "description": "__MSG_description__",
+  "author": "Dmytro Mykolaichuk",
+  "background": {
+    "persistent": false,
+    "scripts": [
+      "js/background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "js/main.js"
+      ]
+    }
+  ],
+  "browser_action": {
+    "default_icon": "./img/icons/extension/free.png",
+    "default_popup": "popup.html",
+    "default_title": "__MSG_name__"
+  },
+  "default_locale": "en",
+  "icons": {
+    "128": "./img/icons/extension/free.png"
+  },
+  "permissions": [
+    "activeTab",
+    "cookies",
+    "clipboardWrite",
+    "storage",
+    "background",
+    "<all_urls>",
+    "tabs"
+  ],
+  "short_name": "__MSG_name__",
+  "update_url": "https://clients2.google.com/service/update2/crx"
+}

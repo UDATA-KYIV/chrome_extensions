@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Chrome Extension Example</title>
+    <link href="css/style.css" rel='stylesheet' type="text/css">
+    <script src="js/jszip.min.js"></script>
+    <script src="js/popup_udate.js"></script>
+</head>
+<body>
+<div class="container">
+    <h1 class="title">UData Images loader</h1>
+    <p id="count_all">There are no images on this page</p>
+    <select name="size" id="size">
+    </select>
+    <button type="button" id="download" class="btn">Download</button>
+
+    <p class="error">No images to download for the specified dimensions.</p>
+
+    <form id="form_filter">
+        <h2>From:</h2>
+        <label>
+            <span class="label_size">Width:</span>
+            <input type="number" name="width" required>
+        </label>
+        <span class="x">x</span>
+        <label>
+            <span class="label_size">Height:</span>
+            <input type="number" name="height">
+        </label>
+        <button type="submit" id="form_filter_btn" class="btn">Download</button>
+    </form>
+</div>
+</body>
+</html>
+
